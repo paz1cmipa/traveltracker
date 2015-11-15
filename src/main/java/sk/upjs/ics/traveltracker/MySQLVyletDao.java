@@ -30,10 +30,7 @@ public class MySQLVyletDao implements VyletDao {
 
     }
 
-    @Override
-    public void upravitVylet(Vylet vylet) {
-
-    }
+  
 
     @Override
     public List<Vylet> dajVsetky() {
@@ -45,6 +42,41 @@ public class MySQLVyletDao implements VyletDao {
 
     @Override
     public void upravitPodrobnosti(Vylet vylet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void upravitKrajina(Vylet vylet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void upravitMesto(Vylet vylet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void upravitPamiatka(Vylet vylet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void upravitDatum(Vylet vylet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void upravitNavstivene(Vylet vylet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void upravitHodnotenie(Vylet vylet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void upravitPoznamky(Vylet vylet) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
