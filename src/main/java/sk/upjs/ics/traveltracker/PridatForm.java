@@ -91,6 +91,9 @@ public class PridatForm extends javax.swing.JFrame {
         vylet.setPrirodna_a_kulturna_pamiatka(destinaciaTextField.getText());
         
         vyletDao.pridat(vylet);
+        this.setVisible(false);
+        
+        
     }//GEN-LAST:event_PridatButtonActionPerformed
    
 

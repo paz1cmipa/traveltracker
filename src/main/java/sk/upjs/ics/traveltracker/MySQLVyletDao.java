@@ -1,6 +1,8 @@
 package sk.upjs.ics.traveltracker;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import java.util.List;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class MySQLVyletDao implements VyletDao {
@@ -29,8 +31,21 @@ public class MySQLVyletDao implements VyletDao {
     }
 
     @Override
-    public void upravit(Vylet vylet) {
+    public void upravitVylet(Vylet vylet) {
 
+    }
+
+    @Override
+    public List<Vylet> dajVsetky() {
+        String sql = "SELECT * FROM vylet ORDER BY datum DESC";
+      BeanPropertyRowMapper<Vylet> mapper = BeanPropertyRowMapper.newInstance(Vylet.class);
+     
+      return jdbcTemplate.query(sql, mapper);
+    }
+
+    @Override
+    public void upravitPodrobnosti(Vylet vylet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

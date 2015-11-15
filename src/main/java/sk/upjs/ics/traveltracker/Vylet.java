@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Vylet {
     
+    private int id;
     private String krajina;
     private String mesto;
     private String prirodna_a_kulturna_pamiatka;
@@ -12,6 +13,10 @@ public class Vylet {
     private String poznamka;
     private String podrobnosti;
     private Date datum;
+    
+       public int getId() {
+        return id;
+    }
 
     public int getHodnotenie() {
         return hodnotenie;

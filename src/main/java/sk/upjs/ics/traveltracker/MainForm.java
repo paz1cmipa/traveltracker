@@ -5,17 +5,22 @@
  */
 package sk.upjs.ics.traveltracker;
 
+import java.util.List;
+
 /**
  *
  * @author Pandita
  */
 public class MainForm extends javax.swing.JFrame {
+    
+    VyletDao vyletDao = new MySQLVyletDao();
 
     /**
      * Creates new form MainForm
      */
     public MainForm() {
         initComponents();
+        refresh();
     }
 
     /**
@@ -64,6 +69,12 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(VyletTable);
+        if (VyletTable.getColumnModel().getColumnCount() > 0) {
+            VyletTable.getColumnModel().getColumn(0).setHeaderValue("Krajina");
+            VyletTable.getColumnModel().getColumn(1).setHeaderValue("Mesto");
+            VyletTable.getColumnModel().getColumn(2).setHeaderValue("Destinácia");
+            VyletTable.getColumnModel().getColumn(3).setHeaderValue("Dátum");
+        }
 
         HladatButton.setText("Hľadať");
 
@@ -122,9 +133,24 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void PridatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PridatButtonActionPerformed
-    
+     PridatForm pridatform = new PridatForm();
+     pridatform.setVisible(true);
     }//GEN-LAST:event_PridatButtonActionPerformed
 
+    public void refresh(){
+        List<Vylet> vylety = vyletDao.dajVsetky();
+        int i = 0;
+        for (Vylet vylet: vylety){
+            if (i == 10){
+                break;
+            }
+            VyletTable.setValueAt(vylet.getKrajina(), i, 0);
+            VyletTable.setValueAt(vylet.getMesto(), i, 1);
+            VyletTable.setValueAt(vylet.getPrirodna_a_kulturna_pamiatka(), i, 2);
+            VyletTable.setValueAt(vylet.getDatum(), i, 3);
+            i++;
+        }
+    }
     /**
      * @param args the command line arguments
      */
