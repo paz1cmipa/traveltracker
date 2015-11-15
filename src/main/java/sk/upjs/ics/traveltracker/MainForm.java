@@ -68,6 +68,11 @@ public class MainForm extends javax.swing.JFrame {
         HladatButton.setText("Hľadať");
 
         PridatButton.setText("Pridať");
+        PridatButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PridatButtonActionPerformed(evt);
+            }
+        });
 
         OdstranitButton.setText("Odstrániť");
 
@@ -115,6 +120,10 @@ public class MainForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PridatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PridatButtonActionPerformed
+    
+    }//GEN-LAST:event_PridatButtonActionPerformed
 
     /**
      * @param args the command line arguments

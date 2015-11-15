@@ -6,7 +6,7 @@ public class Vylet {
     
     private String krajina;
     private String mesto;
-    private String destinacia;
+    private String prirodna_a_kulturna_pamiatka;
     private boolean navstivenost;
     private int hodnotenie;
     private String poznamka;
@@ -61,12 +61,12 @@ public class Vylet {
         this.mesto = mesto;
     }
 
-    public String getDestinacia() {
-        return destinacia;
+    public String getPrirodna_a_kulturna_pamiatka() {
+        return prirodna_a_kulturna_pamiatka;
     }
 
-    public void setDestinacia(String destinacia) {
-        this.destinacia = destinacia;
+    public void setPrirodna_a_kulturna_pamiatka(String prirodna_a_kulturna_pamiatka) {
+        this.prirodna_a_kulturna_pamiatka = prirodna_a_kulturna_pamiatka;
     }
 
     public boolean isNavstivenost() {
