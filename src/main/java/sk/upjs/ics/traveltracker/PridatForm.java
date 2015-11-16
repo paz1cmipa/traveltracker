@@ -1,8 +1,10 @@
 
 package sk.upjs.ics.traveltracker;
 
+import java.awt.event.ActionListener;
 import java.util.*;
 import javax.swing.JComboBox;
+import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
 
 public class PridatForm extends javax.swing.JFrame {
@@ -11,12 +13,17 @@ public class PridatForm extends javax.swing.JFrame {
   
     public PridatForm() {
         initComponents();
+        krajinaComboBox.setEditable(true);
+        krajinaComboBox.addActionListener(krajinaComboBox);
+        AutoCompleteDecorator.decorate(krajinaComboBox);
         List<String> zoznamKrajin = dajVsetkyKrajiny();
         String krajina;
+        krajinaComboBox.addItem(" ");
         for(int i=0; i<zoznamKrajin.size(); i++){
             krajina = zoznamKrajin.get(i);
             krajinaComboBox.addItem(krajina);
         }
+       
         
         
     }
