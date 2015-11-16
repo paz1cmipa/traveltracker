@@ -35,7 +35,7 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="mestoTextField" pref="143" max="32767" attributes="0"/>
                           <Component id="destinaciaTextField" max="32767" attributes="0"/>
-                          <Component id="krajinaTextField" max="32767" attributes="0"/>
+                          <Component id="krajinaComboBox" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -52,10 +52,10 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="krajinaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="krajinaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="krajinaLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="krajinaComboBox" min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -72,14 +72,12 @@
                   <Component id="PridatButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="datumDatePicker" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="42" max="32767" attributes="0"/>
+              <EmptySpace pref="45" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="krajinaTextField">
-    </Component>
     <Component class="javax.swing.JTextField" name="mestoTextField">
     </Component>
     <Component class="javax.swing.JTextField" name="destinaciaTextField">
@@ -108,6 +106,13 @@
       </Events>
     </Component>
     <Component class="org.jdesktop.swingx.JXDatePicker" name="datumDatePicker">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="krajinaComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

@@ -34,7 +34,7 @@ public class MySQLVyletDao implements VyletDao {
 
     @Override
     public List<Vylet> dajVsetky() {
-        String sql = "SELECT * FROM vylet ORDER BY datum DESC";
+        String sql = "SELECT * FROM vylet ORDER BY datum ASC";
       BeanPropertyRowMapper<Vylet> mapper = BeanPropertyRowMapper.newInstance(Vylet.class);
      
       return jdbcTemplate.query(sql, mapper);

@@ -11,6 +11,13 @@ public class PridatForm extends javax.swing.JFrame {
   
     public PridatForm() {
         initComponents();
+        List<String> zoznamKrajin = dajVsetkyKrajiny();
+        String krajina;
+        for(int i=0; i<zoznamKrajin.size(); i++){
+            krajina = zoznamKrajin.get(i);
+            krajinaComboBox.addItem(krajina);
+        }
+        
         
     }
     @SuppressWarnings("unchecked")
@@ -18,7 +25,6 @@ public class PridatForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        krajinaTextField = new javax.swing.JTextField();
         mestoTextField = new javax.swing.JTextField();
         destinaciaTextField = new javax.swing.JTextField();
         krajinaLabel = new javax.swing.JLabel();
@@ -26,6 +32,7 @@ public class PridatForm extends javax.swing.JFrame {
         pamiatkaLabel = new javax.swing.JLabel();
         PridatButton = new javax.swing.JButton();
         datumDatePicker = new org.jdesktop.swingx.JXDatePicker();
+        krajinaComboBox = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,7 +64,7 @@ public class PridatForm extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(mestoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                             .addComponent(destinaciaTextField)
-                            .addComponent(krajinaTextField))
+                            .addComponent(krajinaComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(krajinaLabel)
@@ -68,10 +75,10 @@ public class PridatForm extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(krajinaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(krajinaLabel))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(krajinaLabel)
+                    .addComponent(krajinaComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mestoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -84,15 +91,27 @@ public class PridatForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PridatButton)
                     .addComponent(datumDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+      public List<String> dajVsetkyKrajiny(){
+        String[] lokaly = Locale.getISOCountries();
+        List<String> krajiny = new ArrayList<String>();
+        for (String kodKrajiny: lokaly){
+            Locale lokal = new Locale ("",kodKrajiny);
+            krajiny.add(lokal.getDisplayCountry());
+        }
+        
+        return krajiny;
+      }
+    
     private void PridatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PridatButtonActionPerformed
         Vylet vylet = new Vylet();
-        vylet.setKrajina(krajinaTextField.getText());
+        vylet.setKrajina((String) krajinaComboBox.getSelectedItem());
+        //vylet.setKrajina(krajinaTextField.getText());
         vylet.setMesto(mestoTextField.getText());
         vylet.setPrirodna_a_kulturna_pamiatka(destinaciaTextField.getText());
         if(datumDatePicker.getDate() != null){
@@ -149,8 +168,8 @@ public class PridatForm extends javax.swing.JFrame {
     private javax.swing.JButton PridatButton;
     private org.jdesktop.swingx.JXDatePicker datumDatePicker;
     private javax.swing.JTextField destinaciaTextField;
+    private javax.swing.JComboBox krajinaComboBox;
     private javax.swing.JLabel krajinaLabel;
-    private javax.swing.JTextField krajinaTextField;
     private javax.swing.JLabel mestoLabel;
     private javax.swing.JTextField mestoTextField;
     private javax.swing.JLabel pamiatkaLabel;

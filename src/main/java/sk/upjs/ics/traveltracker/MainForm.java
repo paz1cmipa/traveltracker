@@ -6,6 +6,7 @@
 package sk.upjs.ics.traveltracker;
 
 import java.util.List;
+import javax.swing.JTable;
 
 /**
  *
@@ -135,6 +136,7 @@ public class MainForm extends javax.swing.JFrame {
     private void PridatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PridatButtonActionPerformed
      PridatForm pridatform = new PridatForm();
      pridatform.setVisible(true);
+
     }//GEN-LAST:event_PridatButtonActionPerformed
 
     public void refresh(){
@@ -185,6 +187,16 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
     }
+
+    public JTable getVyletTable() {
+        return VyletTable;
+    }
+
+    public void setVyletTable(JTable VyletTable) {
+        this.VyletTable = VyletTable;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton HladatButton;
