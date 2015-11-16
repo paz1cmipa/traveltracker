@@ -80,4 +80,17 @@ public class MySQLVyletDao implements VyletDao {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public List<Vylet> Hladat(String s) {
+       String sql = "select * from vylet" +
+    " where" +
+    " krajina like '?'" +
+    " or mesto like '?'" +
+    " or prirodna_a_kulturna_pamiatka like '?'";
+       
+     BeanPropertyRowMapper<Vylet> mapper = BeanPropertyRowMapper.newInstance(Vylet.class);
+     
+     return jdbcTemplate.query(sql, mapper);
+    }
+
 }

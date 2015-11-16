@@ -6,6 +6,7 @@
 package sk.upjs.ics.traveltracker;
 
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 /**
@@ -78,6 +79,11 @@ public class MainForm extends javax.swing.JFrame {
         }
 
         HladatButton.setText("Hľadať");
+        HladatButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HladatButtonActionPerformed(evt);
+            }
+        });
 
         PridatButton.setText("Pridať");
         PridatButton.addActionListener(new java.awt.event.ActionListener() {
@@ -138,6 +144,21 @@ public class MainForm extends javax.swing.JFrame {
      pridatform.setVisible(true);
 
     }//GEN-LAST:event_PridatButtonActionPerformed
+
+    private void HladatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HladatButtonActionPerformed
+        String slovo = HladatTextField.getText();
+        List<Vylet> hladaneVylety = vyletDao.Hladat(slovo);
+        if(hladaneVylety.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Hľadaný výlet sa nenašiel", "Chyba", JOptionPane.ERROR_MESSAGE);
+        }else{
+           for (int i=0; i<hladaneVylety.size(); i++){
+               VyletTable.setValueAt(hladaneVylety.get(i), i, 0);
+               VyletTable.setValueAt(hladaneVylety.get(i), i, 1);
+               VyletTable.setValueAt(hladaneVylety.get(i), i, 2);
+               VyletTable.setValueAt(hladaneVylety.get(i), i, 3);
+           }
+        }
+    }//GEN-LAST:event_HladatButtonActionPerformed
 
     public void refresh(){
         List<Vylet> vylety = vyletDao.dajVsetky();

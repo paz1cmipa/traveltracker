@@ -4,6 +4,7 @@ package sk.upjs.ics.traveltracker;
 import java.awt.event.ActionListener;
 import java.util.*;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
 
@@ -122,7 +123,12 @@ public class PridatForm extends javax.swing.JFrame {
         vylet.setMesto(mestoTextField.getText());
         vylet.setPrirodna_a_kulturna_pamiatka(destinaciaTextField.getText());
         if(datumDatePicker.getDate() != null){
-            vylet.setDatum(datumDatePicker.getDate());
+            Date datum = datumDatePicker.getDate();
+            if(datum.before(new Date())){
+                 JOptionPane.showMessageDialog(this, "Dátum je neplatný", "Chyba", JOptionPane.ERROR_MESSAGE);
+                return;  
+            }
+            vylet.setDatum(datum);
         }
         
         vyletDao.pridat(vylet);

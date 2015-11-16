@@ -15,6 +15,7 @@ public interface VyletDao {
     public void upravitPoznamky(Vylet vylet);
     public void upravitPodrobnosti(Vylet vylet);
     public List<Vylet> dajVsetky();
+    public List<Vylet> Hladat(String s);
     
     
 }
