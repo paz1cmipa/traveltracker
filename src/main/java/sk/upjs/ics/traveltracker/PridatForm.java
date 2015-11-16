@@ -25,6 +25,7 @@ public class PridatForm extends javax.swing.JFrame {
         mestoLabel = new javax.swing.JLabel();
         pamiatkaLabel = new javax.swing.JLabel();
         PridatButton = new javax.swing.JButton();
+        datumDatePicker = new org.jdesktop.swingx.JXDatePicker();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,7 +49,10 @@ public class PridatForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PridatButton)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(PridatButton)
+                        .addGap(37, 37, 37)
+                        .addComponent(datumDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(mestoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
@@ -77,7 +81,9 @@ public class PridatForm extends javax.swing.JFrame {
                     .addComponent(destinaciaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pamiatkaLabel))
                 .addGap(18, 18, 18)
-                .addComponent(PridatButton)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PridatButton)
+                    .addComponent(datumDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
@@ -89,6 +95,9 @@ public class PridatForm extends javax.swing.JFrame {
         vylet.setKrajina(krajinaTextField.getText());
         vylet.setMesto(mestoTextField.getText());
         vylet.setPrirodna_a_kulturna_pamiatka(destinaciaTextField.getText());
+        if(datumDatePicker.getDate() != null){
+            vylet.setDatum(datumDatePicker.getDate());
+        }
         
         vyletDao.pridat(vylet);
         this.setVisible(false);
@@ -138,6 +147,7 @@ public class PridatForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton PridatButton;
+    private org.jdesktop.swingx.JXDatePicker datumDatePicker;
     private javax.swing.JTextField destinaciaTextField;
     private javax.swing.JLabel krajinaLabel;
     private javax.swing.JTextField krajinaTextField;
