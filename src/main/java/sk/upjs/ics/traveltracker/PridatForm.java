@@ -9,7 +9,7 @@ import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
 public class PridatForm extends javax.swing.JFrame {
     
-     VyletDao vyletDao = new MySQLVyletDao();
+     VyletDao vyletDao = VyletDaoFactory.INSTANCE.getVyletDao();
   
     public PridatForm() {
         initComponents();

@@ -14,7 +14,7 @@ import javax.swing.JTable;
  */
 public class MainForm extends javax.swing.JFrame {
     
-    VyletDao vyletDao = new MySQLVyletDao();
+    VyletDao vyletDao = VyletDaoFactory.INSTANCE.getVyletDao();
 
     /**
      * Creates new form MainForm

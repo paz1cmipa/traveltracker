@@ -26,12 +26,6 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="DatumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="PamiatkaLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="PamiatkaTextField" pref="96" max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="KrajinaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -41,6 +35,17 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="KrajinaTextField" max="32767" attributes="0"/>
                           <Component id="MestoTextField" pref="98" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="PamiatkaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="DatumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="PamiatkaTextField" pref="96" max="32767" attributes="0"/>
+                          <Component id="jXDatePicker1" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -136,6 +141,7 @@
                       <Component id="PoznamkyTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="UpravitDatumButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="UpravitPoznamkyButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jXDatePicker1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="61" max="32767" attributes="0"/>
@@ -237,6 +243,8 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
       </Properties>
+    </Component>
+    <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePicker1">
     </Component>
   </SubComponents>
 </Form>
