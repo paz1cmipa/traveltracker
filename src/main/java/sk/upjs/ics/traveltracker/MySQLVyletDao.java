@@ -1,6 +1,7 @@
 package sk.upjs.ics.traveltracker;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import java.util.Date;
 import java.util.List;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,6 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class MySQLVyletDao implements VyletDao {
 
     private JdbcTemplate jdbcTemplate;
+    private int id;
 
     public MySQLVyletDao() {
         MysqlDataSource dataSource = new MysqlDataSource();
@@ -16,17 +18,34 @@ public class MySQLVyletDao implements VyletDao {
         dataSource.setPassword("TravelTracker");
 
         jdbcTemplate = new JdbcTemplate(dataSource);
+        int max=0;
+        List<Vylet> vylety=dajVsetky();
+        for (Vylet vylet : vylety) {
+           if(vylet.getId()<max){
+           max=vylet.getId();
+           }  
+        }
+        id=max+1;
     }
 
     @Override
     public void pridat(Vylet vylet) {
         String sql = "INSERT INTO vylet VALUES (?,?,?,?,?)";
-        jdbcTemplate.update(sql, null, vylet.getKrajina(), vylet.getMesto(), vylet.getPrirodna_a_kulturna_pamiatka(), vylet.getDatum());
+          id++;
+        vylet.setId(id);
+        jdbcTemplate.update(sql, vylet.getId(), vylet.getKrajina(), vylet.getMesto(), vylet.getPrirodna_a_kulturna_pamiatka(), vylet.getDatum());
+        String sql1 = "INSERT INTO podrobnosti VALUES (?,?,?,?,?)";
+        jdbcTemplate.update(sql1, vylet.getId(), vylet.isNavstivenost(), vylet.getHodnotenie(), vylet.getPodrobnosti(), vylet.getPoznamka());
 
     }
 
     @Override
     public void odstranit(Vylet vylet) {
+        int cislo=vylet.getId();
+        String sql="DELETE FROM vylet where id=?";
+        jdbcTemplate.update(sql,cislo);
+         String sql1="DELETE FROM podrobnosti where id=?";
+        jdbcTemplate.update(sql1,cislo);
 
     }
 
@@ -42,42 +61,59 @@ public class MySQLVyletDao implements VyletDao {
 
     @Override
     public void upravitPodrobnosti(Vylet vylet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      String sql="UPDATE podrobnosti SET podrobnosti= ? where id=?";
+       jdbcTemplate.update(sql,vylet.getPodrobnosti(),vylet.getId());
     }
 
     @Override
     public void upravitKrajina(Vylet vylet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql="UPDATE vylet SET krajina= ? where id=?";
+          jdbcTemplate.update(sql,vylet.getKrajina(),vylet.getId());
+        
     }
 
     @Override
     public void upravitMesto(Vylet vylet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql="UPDATE vylet SET mesto= ? where id=?";
+            jdbcTemplate.update(sql,vylet.getMesto(),vylet.getId());
     }
 
     @Override
     public void upravitPamiatka(Vylet vylet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql="UPDATE vylet SET Prirodna_a_kulturna_pamiatka= ? where id=?";
+             jdbcTemplate.update(sql,vylet.getPrirodna_a_kulturna_pamiatka(),vylet.getId());
+        
     }
 
     @Override
     public void upravitDatum(Vylet vylet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql="UPDATE vylet SET datum= ? where id=?";
+             jdbcTemplate.update(sql,vylet.getDatum(),vylet.getId());
+        
+        
+         
     }
+    
 
     @Override
     public void upravitNavstivene(Vylet vylet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql="UPDATE podrobnosti SET Navstivenost= ? where id=?";
+            jdbcTemplate.update(sql,vylet.isNavstivenost(),vylet.getId());
+        
+        
     }
 
     @Override
     public void upravitHodnotenie(Vylet vylet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        String sql="UPDATE podrobnosti SET Hodnotenie= ? where id=?";
+            jdbcTemplate.update(sql,vylet.getHodnotenie(),vylet.getId());
+        }
 
     @Override
     public void upravitPoznamky(Vylet vylet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql="UPDATE podrobnosti SET Poznamky= ? where id=?";
+            jdbcTemplate.update(sql,vylet.getPoznamka(),vylet.getId());
+        
     }
 
     @Override
@@ -92,5 +128,21 @@ public class MySQLVyletDao implements VyletDao {
      
      return jdbcTemplate.query(sql, mapper);
     }
+
+    @Override
+    public Vylet hladatpreUpravu(String krajina, String mesto, String pamiatka) {
+       List<Vylet> vylety=dajVsetky();
+      
+        for (Vylet vylet : vylety) {
+           if((vylet.getKrajina().equals(krajina))
+                   &&(vylet.getMesto().equals(mesto))
+                   &&(vylet.getPrirodna_a_kulturna_pamiatka().equals(pamiatka))){
+           return vylet;
+           }
+            
+        }
+    return null;
+    }
+   
 
 }

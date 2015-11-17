@@ -27,11 +27,6 @@
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="PridatButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                      <Component id="datumDatePicker" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="mestoTextField" pref="143" max="32767" attributes="0"/>
                           <Component id="destinaciaTextField" max="32767" attributes="0"/>
@@ -43,6 +38,11 @@
                           <Component id="mestoLabel" min="-2" max="-2" attributes="0"/>
                           <Component id="pamiatkaLabel" min="-2" max="-2" attributes="0"/>
                       </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="PridatButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="datumDatePicker" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="60" max="32767" attributes="0"/>
@@ -69,8 +69,8 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="PridatButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="datumDatePicker" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="PridatButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="45" max="32767" attributes="0"/>
           </Group>
@@ -106,6 +106,9 @@
       </Events>
     </Component>
     <Component class="org.jdesktop.swingx.JXDatePicker" name="datumDatePicker">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="datumDatePickerActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="krajinaComboBox">
       <Properties>

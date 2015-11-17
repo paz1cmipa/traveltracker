@@ -57,6 +57,12 @@ public class PridatForm extends javax.swing.JFrame {
             }
         });
 
+        datumDatePicker.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                datumDatePickerActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,10 +70,6 @@ public class PridatForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(PridatButton)
-                        .addGap(37, 37, 37)
-                        .addComponent(datumDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(mestoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
@@ -77,7 +79,11 @@ public class PridatForm extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(krajinaLabel)
                             .addComponent(mestoLabel)
-                            .addComponent(pamiatkaLabel))))
+                            .addComponent(pamiatkaLabel)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(PridatButton)
+                        .addGap(37, 37, 37)
+                        .addComponent(datumDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -97,8 +103,8 @@ public class PridatForm extends javax.swing.JFrame {
                     .addComponent(pamiatkaLabel))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PridatButton)
-                    .addComponent(datumDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datumDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PridatButton))
                 .addContainerGap(45, Short.MAX_VALUE))
         );
 
@@ -136,6 +142,10 @@ public class PridatForm extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_PridatButtonActionPerformed
+
+    private void datumDatePickerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datumDatePickerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_datumDatePickerActionPerformed
    
 
     /**

@@ -25,131 +25,141 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="KrajinaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="MestoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="KrajinaTextField" max="32767" attributes="0"/>
-                          <Component id="MestoTextField" pref="98" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="PamiatkaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="DatumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="PamiatkaTextField" pref="96" max="32767" attributes="0"/>
-                          <Component id="jXDatePicker1" max="32767" attributes="0"/>
-                      </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="DatumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="KrajinaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="MestoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="PamiatkaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="DatumDatePicker" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="KrajinaTextField" alignment="0" pref="77" max="32767" attributes="0"/>
+                      <Component id="MestoTextField" alignment="0" max="32767" attributes="0"/>
+                      <Component id="PamiatkaTextField" alignment="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="UpravitKrajinaButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Component id="NavstiveneLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="NavstiveneTextField" min="-2" pref="83" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="UpravitNavstiveneButton" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="UpravitKrajinaButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="UpravitMestoButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="UpravitPamiatkaButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="UpravitDatumButton" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="UpravitMestoButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="HodnotenieLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="UpravitPamiatkaButton" min="-2" max="-2" attributes="0"/>
-                                  <Component id="UpravitDatumButton" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="PoznamkyLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="PodrobnostiLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="HodnotenieLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="NavstiveneLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="NavstiveneTextField" pref="68" max="32767" attributes="0"/>
+                          <Component id="HodnotenieTextField" max="32767" attributes="0"/>
+                      </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="PoznamkyTextField" min="-2" pref="80" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="UpravitPoznamkyButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="PodrobnostiTextField" min="-2" pref="80" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="UpravitPodrobnostiButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="HodnotenieTextField" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="UpravitHodnotenieButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <Component id="UpravitNavstiveneButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                      <Component id="DokonceneButton" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="PodrobnostiLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="PoznamkyLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="PoznamkyTextField" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="UpravitPoznamkyButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="PodrobnostiTextField" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="UpravitPodrobnostiButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="93" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="KrajinaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="KrajinaTextField" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="NavstiveneTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="NavstiveneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="KrajinaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="UpravitKrajinaButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="NavstiveneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="NavstiveneTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="UpravitNavstiveneButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="MestoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="MestoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="HodnotenieTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="HodnotenieLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="UpravitMestoButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="UpravitHodnotenieButton" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="PamiatkaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PamiatkaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PodrobnostiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PodrobnostiTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="UpravitPamiatkaButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="UpravitPodrobnostiButton" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="PoznamkyLabel" alignment="1" min="-2" pref="16" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="DatumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="PoznamkyTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="UpravitDatumButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="UpravitPoznamkyButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jXDatePicker1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="HodnotenieLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="HodnotenieTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="UpravitHodnotenieButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="MestoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="MestoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="UpravitMestoButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="UpravitPamiatkaButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="PamiatkaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="PamiatkaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="PodrobnostiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="PodrobnostiTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="UpravitPodrobnostiButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="61" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="DatumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="DatumDatePicker" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="UpravitDatumButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="PoznamkyLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="PoznamkyTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="UpravitPoznamkyButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="35" max="32767" attributes="0"/>
+              <Component id="DokonceneButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
+    <Component class="org.jdesktop.swingx.JXDatePicker" name="DatumDatePicker">
+    </Component>
     <Component class="javax.swing.JLabel" name="KrajinaLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Krajina"/>
@@ -176,75 +186,105 @@
     </Component>
     <Component class="javax.swing.JTextField" name="PamiatkaTextField">
     </Component>
+    <Component class="javax.swing.JButton" name="UpravitKrajinaButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpravitKrajinaButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="UpravitMestoButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpravitMestoButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="UpravitPamiatkaButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpravitPamiatkaButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="UpravitDatumButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpravitDatumButtonActionPerformed"/>
+      </Events>
+    </Component>
     <Component class="javax.swing.JLabel" name="NavstiveneLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Navstivene"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="NavstiveneTextField">
     </Component>
     <Component class="javax.swing.JLabel" name="HodnotenieLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hodnotenie"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="HodnotenieTextField">
-    </Component>
     <Component class="javax.swing.JLabel" name="PodrobnostiLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Podrobnosti"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="PodrobnostiTextField">
     </Component>
     <Component class="javax.swing.JLabel" name="PoznamkyLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Poznamky"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JTextField" name="NavstiveneTextField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="HodnotenieTextField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="PodrobnostiTextField">
+    </Component>
     <Component class="javax.swing.JTextField" name="PoznamkyTextField">
-    </Component>
-    <Component class="javax.swing.JButton" name="UpravitKrajinaButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="UpravitMestoButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="UpravitPamiatkaButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="UpravitDatumButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="UpravitNavstiveneButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpravitNavstiveneButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="UpravitHodnotenieButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpravitHodnotenieButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="UpravitPodrobnostiButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpravitPodrobnostiButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="UpravitPoznamkyButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpravitPoznamkyButtonActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="org.jdesktop.swingx.JXDatePicker" name="jXDatePicker1">
+    <Component class="javax.swing.JButton" name="DokonceneButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dokon&#x10d;en&#xe9;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DokonceneButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

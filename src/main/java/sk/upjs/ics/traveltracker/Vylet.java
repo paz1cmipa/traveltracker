@@ -83,4 +83,7 @@ public class Vylet {
     }
     
     
+    void setId(int id) {
+       this.id=id;
+    }
 }

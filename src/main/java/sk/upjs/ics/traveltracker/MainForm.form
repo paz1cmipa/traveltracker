@@ -144,11 +144,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Odstr&#xe1;ni&#x165;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OdstranitButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="UpravitButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Upravi&#x165;"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UpravitButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -93,8 +93,18 @@ public class MainForm extends javax.swing.JFrame {
         });
 
         OdstranitButton.setText("Odstrániť");
+        OdstranitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OdstranitButtonActionPerformed(evt);
+            }
+        });
 
         UpravitButton.setText("Upraviť");
+        UpravitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpravitButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -159,6 +169,28 @@ public class MainForm extends javax.swing.JFrame {
            }
         }
     }//GEN-LAST:event_HladatButtonActionPerformed
+
+    private void UpravitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpravitButtonActionPerformed
+        int cisloR = VyletTable.getSelectedRow();
+        Vylet vylet=vyletDao.hladatpreUpravu(VyletTable.getValueAt(cisloR, 0).toString(),
+                VyletTable.getValueAt(cisloR, 1).toString(),
+                VyletTable.getValueAt(cisloR, 2).toString());
+       UpravitForm upravit=new UpravitForm(vylet);
+       upravit.setVisible(true);
+      
+    }//GEN-LAST:event_UpravitButtonActionPerformed
+
+    private void OdstranitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OdstranitButtonActionPerformed
+          int cisloR = VyletTable.getSelectedRow();
+          Vylet vylet=vyletDao.hladatpreUpravu(VyletTable.getValueAt(cisloR, 0).toString(),
+                VyletTable.getValueAt(cisloR, 1).toString(),
+                VyletTable.getValueAt(cisloR, 2).toString());
+          if(vylet == null){
+            return;
+          }
+          vyletDao.odstranit(vylet);
+          refresh();
+    }//GEN-LAST:event_OdstranitButtonActionPerformed
 
     public void refresh(){
         List<Vylet> vylety = vyletDao.dajVsetky();

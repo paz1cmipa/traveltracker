@@ -1,6 +1,7 @@
 
 package sk.upjs.ics.traveltracker;
 
+import java.util.Date;
 import java.util.List;
 
 public interface VyletDao {
@@ -16,6 +17,7 @@ public interface VyletDao {
     public void upravitPodrobnosti(Vylet vylet);
     public List<Vylet> dajVsetky();
     public List<Vylet> Hladat(String s);
+    public Vylet hladatpreUpravu(String krajina, String mesto, String pamiatka);
     
     
 }
