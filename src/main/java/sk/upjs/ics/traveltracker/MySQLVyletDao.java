@@ -30,7 +30,7 @@ public class MySQLVyletDao implements VyletDao {
 
     @Override
     public void odstranit(Vylet vylet) {
-        int cislo=vylet.getId();
+        int cislo = vylet.getId();
         String sql="DELETE FROM vylet where id=?";
         jdbcTemplate.update(sql,cislo);
          String sql1="DELETE FROM podrobnosti where id=?";
@@ -48,63 +48,8 @@ public class MySQLVyletDao implements VyletDao {
       return jdbcTemplate.query(sql, mapper);
     }
 
-    @Override
-    public void upravitPodrobnosti(Vylet vylet) {
-      String sql="UPDATE podrobnosti SET podrobnosti= ? where id=?";
-       jdbcTemplate.update(sql,vylet.getPodrobnosti(),vylet.getId());
-    }
 
-    @Override
-    public void upravitKrajina(Vylet vylet) {
-        String sql="UPDATE vylet SET krajina= ? where id=?";
-          jdbcTemplate.update(sql,vylet.getKrajina(),vylet.getId());
-        
-    }
-
-    @Override
-    public void upravitMesto(Vylet vylet) {
-        String sql="UPDATE vylet SET mesto= ? where id=?";
-            jdbcTemplate.update(sql,vylet.getMesto(),vylet.getId());
-    }
-
-    @Override
-    public void upravitPamiatka(Vylet vylet) {
-        String sql="UPDATE vylet SET Prirodna_a_kulturna_pamiatka= ? where id=?";
-             jdbcTemplate.update(sql,vylet.getPrirodna_a_kulturna_pamiatka(),vylet.getId());
-        
-    }
-
-    @Override
-    public void upravitDatum(Vylet vylet) {
-        String sql="UPDATE vylet SET datum= ? where id=?";
-             jdbcTemplate.update(sql,vylet.getDatum(),vylet.getId());
-        
-        
-         
-    }
-    
-
-    @Override
-    public void upravitNavstivene(Vylet vylet) {
-        String sql="UPDATE podrobnosti SET Navstivenost= ? where id=?";
-            jdbcTemplate.update(sql,vylet.isNavstivenost(),vylet.getId());
-        
-        
-    }
-
-    @Override
-    public void upravitHodnotenie(Vylet vylet) {
-        String sql="UPDATE podrobnosti SET Hodnotenie= ? where id=?";
-            jdbcTemplate.update(sql,vylet.getHodnotenie(),vylet.getId());
-        }
-
-    @Override
-    public void upravitPoznamky(Vylet vylet) {
-        String sql="UPDATE podrobnosti SET Poznamky= ? where id=?";
-            jdbcTemplate.update(sql,vylet.getPoznamka(),vylet.getId());
-        
-    }
-
+  
     @Override
     public List<Vylet> Hladat(String s) {
     /*   String sql = "select * from vylet" +
@@ -121,7 +66,7 @@ public class MySQLVyletDao implements VyletDao {
     }
 
     @Override
-    public Vylet hladatpreUpravu(String krajina, String mesto, String pamiatka) {
+    public Vylet hladatPreUpravu(String krajina, String mesto, String pamiatka) {
        List<Vylet> vylety=dajVsetky();
       
         for (Vylet vylet : vylety) {
@@ -133,6 +78,18 @@ public class MySQLVyletDao implements VyletDao {
             
         }
     return null;
+    }
+
+    @Override
+    public void Upravit(Vylet vylet) {
+         String sql = "UPDATE `traveltracker`.`vylet`" +
+        " SET" +
+        " `krajina` = ?," +
+        " `mesto` = ?," +
+        " `prirodna_a_kulturna_pamiatka` = ?" +
+        " WHERE `id` = ?;";
+        jdbcTemplate.update(sql, vylet.getKrajina(), vylet.getMesto(), vylet.getPrirodna_a_kulturna_pamiatka(), vylet.getId());
+      
     }
    
 

@@ -163,20 +163,20 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_HladatButtonActionPerformed
 
     private void UpravitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpravitButtonActionPerformed
-        int cisloR = VyletTable.getSelectedRow();
-        Vylet vylet=vyletDao.hladatpreUpravu(VyletTable.getValueAt(cisloR, 0).toString(),
-                VyletTable.getValueAt(cisloR, 1).toString(),
-                VyletTable.getValueAt(cisloR, 2).toString());
-       UpravitForm upravit= new UpravitForm(this, true, vylet);
-       upravit.setVisible(true);
+       int cisloRiadku = VyletTable.getSelectedRow();
+       Vylet vylet = vyletDao.hladatPreUpravu(VyletTable.getValueAt(cisloRiadku, 0).toString(),
+                VyletTable.getValueAt(cisloRiadku, 1).toString(),
+                VyletTable.getValueAt(cisloRiadku, 2).toString()); 
+       UpravitForm upravitForm= new UpravitForm(this, true, vylet);
+       upravitForm.setVisible(true);
       
     }//GEN-LAST:event_UpravitButtonActionPerformed
 
     private void OdstranitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OdstranitButtonActionPerformed
-          int cisloR = VyletTable.getSelectedRow();
-          Vylet vylet=vyletDao.hladatpreUpravu(VyletTable.getValueAt(cisloR, 0).toString(),
-                VyletTable.getValueAt(cisloR, 1).toString(),
-                VyletTable.getValueAt(cisloR, 2).toString());
+          int cisloRiadka = VyletTable.getSelectedRow();
+          Vylet vylet = vyletDao.hladatPreUpravu(VyletTable.getValueAt(cisloRiadka, 0).toString(),
+                VyletTable.getValueAt(cisloRiadka, 1).toString(),
+                VyletTable.getValueAt(cisloRiadka, 2).toString());
           if(vylet == null){
             return;
           }
