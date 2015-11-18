@@ -142,6 +142,7 @@ public class MainForm extends javax.swing.JFrame {
     private void PridatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PridatButtonActionPerformed
      PridatForm pridatform = new PridatForm(this, true);
      pridatform.setVisible(true);
+     refresh();
 
     }//GEN-LAST:event_PridatButtonActionPerformed
 
@@ -166,7 +167,7 @@ public class MainForm extends javax.swing.JFrame {
         Vylet vylet=vyletDao.hladatpreUpravu(VyletTable.getValueAt(cisloR, 0).toString(),
                 VyletTable.getValueAt(cisloR, 1).toString(),
                 VyletTable.getValueAt(cisloR, 2).toString());
-       UpravitFormNoDialog upravit=new UpravitFormNoDialog(vylet);
+       UpravitForm upravit= new UpravitForm(this, true, vylet);
        upravit.setVisible(true);
       
     }//GEN-LAST:event_UpravitButtonActionPerformed
