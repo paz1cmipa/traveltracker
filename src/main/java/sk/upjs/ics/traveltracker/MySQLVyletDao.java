@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class MySQLVyletDao implements VyletDao {
 
     private JdbcTemplate jdbcTemplate;
-    private int id;
+
 
     public MySQLVyletDao() {
         MysqlDataSource dataSource = new MysqlDataSource();
@@ -18,25 +18,14 @@ public class MySQLVyletDao implements VyletDao {
         dataSource.setPassword("TravelTracker");
 
         jdbcTemplate = new JdbcTemplate(dataSource);
-        int max=0;
-        List<Vylet> vylety=dajVsetky();
-        for (Vylet vylet : vylety) {
-           if(vylet.getId()<max){
-           max=vylet.getId();
-           }  
-        }
-        id=max+1;
+        
     }
 
     @Override
     public void pridat(Vylet vylet) {
         String sql = "INSERT INTO vylet VALUES (?,?,?,?,?)";
-          id++;
-        vylet.setId(id);
-        jdbcTemplate.update(sql, vylet.getId(), vylet.getKrajina(), vylet.getMesto(), vylet.getPrirodna_a_kulturna_pamiatka(), vylet.getDatum());
-        String sql1 = "INSERT INTO podrobnosti VALUES (?,?,?,?,?)";
-        jdbcTemplate.update(sql1, vylet.getId(), vylet.isNavstivenost(), vylet.getHodnotenie(), vylet.getPodrobnosti(), vylet.getPoznamka());
-
+        jdbcTemplate.update(sql, null, vylet.getKrajina(), vylet.getMesto(), vylet.getPrirodna_a_kulturna_pamiatka(), vylet.getDatum());
+    
     }
 
     @Override
@@ -118,7 +107,7 @@ public class MySQLVyletDao implements VyletDao {
 
     @Override
     public List<Vylet> Hladat(String s) {
-       String sql = "select * from vylet" +
+    /*   String sql = "select * from vylet" +
     " where" +
     " krajina like '?'" +
     " or mesto like '?'" +
@@ -126,7 +115,9 @@ public class MySQLVyletDao implements VyletDao {
        
      BeanPropertyRowMapper<Vylet> mapper = BeanPropertyRowMapper.newInstance(Vylet.class);
      
-     return jdbcTemplate.query(sql, mapper);
+     return jdbcTemplate.query(sql, mapper);*/
+        //prerobit na daj vsetky a v tom zozname to najst
+        return null;
     }
 
     @Override

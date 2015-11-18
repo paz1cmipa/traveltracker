@@ -1,28 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sk.upjs.ics.traveltracker;
 
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
-/**
- *
- * @author Pandita
- */
 public class MainForm extends javax.swing.JFrame {
     
     VyletDao vyletDao = VyletDaoFactory.INSTANCE.getVyletDao();
 
-    /**
-     * Creates new form MainForm
-     */
+   
     public MainForm() {
         initComponents();
         refresh();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -150,7 +140,7 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void PridatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PridatButtonActionPerformed
-     PridatForm pridatform = new PridatForm();
+     PridatForm pridatform = new PridatForm(this, true);
      pridatform.setVisible(true);
 
     }//GEN-LAST:event_PridatButtonActionPerformed
@@ -161,6 +151,7 @@ public class MainForm extends javax.swing.JFrame {
         if(hladaneVylety.isEmpty()){
             JOptionPane.showMessageDialog(this, "Hľadaný výlet sa nenašiel", "Chyba", JOptionPane.ERROR_MESSAGE);
         }else{
+            // vypis do tabulky ???vypis do noveho okna??? - ak v tabulke ako sa vratit spat???
            for (int i=0; i<hladaneVylety.size(); i++){
                VyletTable.setValueAt(hladaneVylety.get(i), i, 0);
                VyletTable.setValueAt(hladaneVylety.get(i), i, 1);
@@ -175,7 +166,7 @@ public class MainForm extends javax.swing.JFrame {
         Vylet vylet=vyletDao.hladatpreUpravu(VyletTable.getValueAt(cisloR, 0).toString(),
                 VyletTable.getValueAt(cisloR, 1).toString(),
                 VyletTable.getValueAt(cisloR, 2).toString());
-       UpravitForm upravit=new UpravitForm(vylet);
+       UpravitFormNoDialog upravit=new UpravitFormNoDialog(vylet);
        upravit.setVisible(true);
       
     }//GEN-LAST:event_UpravitButtonActionPerformed
@@ -241,13 +232,6 @@ public class MainForm extends javax.swing.JFrame {
         });
     }
 
-    public JTable getVyletTable() {
-        return VyletTable;
-    }
-
-    public void setVyletTable(JTable VyletTable) {
-        this.VyletTable = VyletTable;
-    }
     
     
 

@@ -9,17 +9,17 @@ package sk.upjs.ics.traveltracker;
  *
  * @author Robert Link
  */
-public class UpravitForm extends javax.swing.JFrame {
+public class UpravitFormNoDialog extends javax.swing.JFrame {
 
     VyletDao vyletDao = VyletDaoFactory.INSTANCE.getVyletDao();
      private Vylet vylet;
     
-    public UpravitForm(Vylet vylet) {
+    public UpravitFormNoDialog(Vylet vylet) {
         this.vylet=vylet;
         initComponents();
     }
 
-    private UpravitForm() {
+    private UpravitFormNoDialog() {
        initComponents();
     }
     /**
@@ -310,21 +310,23 @@ public class UpravitForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(UpravitForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UpravitFormNoDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(UpravitForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UpravitFormNoDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(UpravitForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UpravitFormNoDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UpravitForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UpravitFormNoDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UpravitForm().setVisible(true);
+                new UpravitFormNoDialog().setVisible(true);
             }
         });
     }

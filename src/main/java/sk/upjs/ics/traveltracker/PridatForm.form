@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -24,91 +24,69 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="mestoTextField" pref="143" max="32767" attributes="0"/>
-                          <Component id="destinaciaTextField" max="32767" attributes="0"/>
-                          <Component id="krajinaComboBox" max="32767" attributes="0"/>
+                  <Component id="KrajinaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="mestoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="pamiatkaLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="datumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="krajinaComboBox" min="-2" pref="182" max="-2" attributes="0"/>
+                  <Component id="mestoTextField" min="-2" pref="182" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="pridatButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="stornoButton" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="krajinaLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="mestoLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="pamiatkaLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="PridatButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                      <Component id="datumDatePicker" min="-2" max="-2" attributes="0"/>
+                      <Component id="datumDatePicker" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pamiatkaTextField" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="60" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="krajinaLabel" min="-2" max="-2" attributes="0"/>
-                  <Component id="krajinaComboBox" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="KrajinaLabel" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="krajinaComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="mestoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="mestoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="mestoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="mestoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="destinaciaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="pamiatkaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="pamiatkaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="datumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="datumDatePicker" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PridatButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="45" max="32767" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="pridatButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="stornoButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="mestoTextField">
-    </Component>
-    <Component class="javax.swing.JTextField" name="destinaciaTextField">
-    </Component>
-    <Component class="javax.swing.JLabel" name="krajinaLabel">
+    <Component class="javax.swing.JLabel" name="KrajinaLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="krajina"/>
+        <Property name="text" type="java.lang.String" value="Krajina:"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="mestoLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="mesto"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="pamiatkaLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="pamiatka"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="PridatButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Prida&#x165;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PridatButtonActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="org.jdesktop.swingx.JXDatePicker" name="datumDatePicker">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="datumDatePickerActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="krajinaComboBox">
       <Properties>
@@ -116,6 +94,43 @@
           <StringArray count="0"/>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="mestoLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mesto:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="mestoTextField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="pamiatkaLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pamiatka:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="pamiatkaTextField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="datumLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="D&#xe1;tum:"/>
+      </Properties>
+    </Component>
+    <Component class="org.jdesktop.swingx.JXDatePicker" name="datumDatePicker">
+    </Component>
+    <Component class="javax.swing.JButton" name="stornoButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Storno"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stornoButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="pridatButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Prida&#x165;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pridatButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
